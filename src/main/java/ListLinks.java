@@ -1,5 +1,6 @@
 
 
+import java.io.File;
 import java.io.IOException;
 
 
@@ -13,11 +14,12 @@ import org.jsoup.select.Elements;
  */
 public class ListLinks {
     public static void main(String[] args) throws IOException {
-        Validate.isTrue(args.length == 1, "usage: supply url to fetch");
-        String url = args[0];
-        print("Fetching %s...", url);
 
-        Document doc = Jsoup.connect(url).get();
+
+        File input = new File("/Users/arthur/Documents/development/wamba.html");
+
+        Document doc = Jsoup.parse(input, null);
+
         Elements links = doc.select("a[href]");
         Elements media = doc.select("[src]");
         Elements imports = doc.select("link[href]");
