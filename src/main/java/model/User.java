@@ -1,33 +1,25 @@
 package model;
 
+import java.sql.Date;
+
 /**
  * Created by arthur on 16.06.18.
  */
 public class User {
 
-    private Integer id;
-    private String name;
-    private int platform;
 
-    public User(Integer id, String name, int platform) {
-        this.id = id;
-        this.name = name;
-        this.platform = platform;
-    }
-    public Integer getId() {
+    private String id;
+    private int platform;
+    private String imageId;
+    private String info;
+    private Date date;
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getPlatform() {
@@ -37,6 +29,31 @@ public class User {
     public void setPlatform(int platform) {
         this.platform = platform;
     }
+
+    public String getImageId() {
+        return imageId;
+    }
+
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
 
 
 }
